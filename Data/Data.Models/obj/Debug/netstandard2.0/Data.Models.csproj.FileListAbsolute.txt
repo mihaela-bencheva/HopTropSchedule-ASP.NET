@@ -1,0 +1,8 @@
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\bin\Debug\netstandard2.0\Data.Models.deps.json
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\bin\Debug\netstandard2.0\Data.Models.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\obj\Debug\netstandard2.0\Data.Models.csprojAssemblyReference.cache
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\obj\Debug\netstandard2.0\Data.Models.AssemblyInfoInputs.cache
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\obj\Debug\netstandard2.0\Data.Models.AssemblyInfo.cs
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\bin\Debug\netstandard2.0\Data.Models.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\obj\Debug\netstandard2.0\Data.Models.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Data\Data.Models\obj\Debug\netstandard2.0\Data.Models.pdb
