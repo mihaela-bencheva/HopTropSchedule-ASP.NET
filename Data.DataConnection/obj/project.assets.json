@@ -5785,9 +5785,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VikS\\source\\repos\\hopTropSchedule\\Data.DataConnection\\Data.DataConnection.csproj",
-      "projectName": "Data.DataConnection",
-      "projectPath": "C:\\Users\\VikS\\source\\repos\\hopTropSchedule\\Data.DataConnection\\Data.DataConnection.csproj",
+      "projectUniqueName": "C:\\Users\\VikS\\source\\repos\\hopTropSchedule\\Data.DataConnection\\DataConnection.csproj",
+      "projectName": "DataConnection",
+      "projectPath": "C:\\Users\\VikS\\source\\repos\\hopTropSchedule\\Data.DataConnection\\DataConnection.csproj",
       "packagesPath": "C:\\Users\\VikS\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\VikS\\source\\repos\\hopTropSchedule\\Data.DataConnection\\obj\\",
       "projectStyle": "PackageReference",

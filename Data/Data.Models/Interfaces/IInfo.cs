@@ -7,6 +7,7 @@ namespace Data.Models.Interfaces
 {
     interface IInfo
     {
+        [Key]
         [StringLength(8)]
         string ID { get; set; }
     }
