@@ -1,0 +1,14 @@
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\tokenconfig.json
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Services.deps.json
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Services.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Services.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Data.Models.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Data.Models.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.csprojAssemblyReference.cache
+C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfoInputs.cache
+C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.AssemblyInfo.cs
+C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.csproj.CopyComplete
+C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\DataConnection.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\DataConnection.pdb

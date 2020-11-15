@@ -1,0 +1,7 @@
+{
+  "secret": "Very secret...Don't tell anybody...shhh",
+  "audience": "SampleAudience",
+  "AccessExpiration": 30,
+  "RefreshExpiration": 60,
+  "Issuer": "http://localhost:62993"
+}

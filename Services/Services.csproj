@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Data.DataConnection\DataConnection.csproj" />
+    <ProjectReference Include="..\Data\Data.Models\Data.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="tokenconfig.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

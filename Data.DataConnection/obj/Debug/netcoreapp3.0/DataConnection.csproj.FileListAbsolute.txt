@@ -1,0 +1,13 @@
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\DataConnection.deps.json
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\DataConnection.runtimeconfig.json
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\DataConnection.runtimeconfig.dev.json
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\DataConnection.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\DataConnection.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\Data.Models.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\bin\Debug\netcoreapp3.0\Data.Models.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\obj\Debug\netcoreapp3.0\DataConnection.csprojAssemblyReference.cache
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\obj\Debug\netcoreapp3.0\DataConnection.AssemblyInfoInputs.cache
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\obj\Debug\netcoreapp3.0\DataConnection.AssemblyInfo.cs
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\obj\Debug\netcoreapp3.0\DataConnection.csproj.CopyComplete
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\obj\Debug\netcoreapp3.0\DataConnection.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Data.DataConnection\obj\Debug\netcoreapp3.0\DataConnection.pdb
