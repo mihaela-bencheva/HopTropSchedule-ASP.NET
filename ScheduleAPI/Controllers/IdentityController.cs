@@ -12,7 +12,7 @@ namespace ScheduleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class IdentityController : ControllerBase
     {
         private readonly IdentityService identityService;
@@ -20,9 +20,23 @@ namespace ScheduleAPI.Controllers
         {
             this.identityService = identityService;
         }
-        public IActionResult Register(UserDto model)
+        [Route("register")]
+        [HttpPost]
+        public IActionResult Register(RegisterDto model)
         {
             var token = identityService.RegisterUser(model);
+            if (string.IsNullOrEmpty(token))
+            {
+                return BadRequest();
+            }
+            return Ok(token);
+        }
+
+        [Route("login")]
+        [HttpPost]
+        public IActionResult Login(UserDto user)
+        {
+            var token = identityService.LogInUser(user);
             if (string.IsNullOrEmpty(token))
             {
                 return BadRequest();

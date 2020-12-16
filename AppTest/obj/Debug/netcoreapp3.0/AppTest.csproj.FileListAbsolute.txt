@@ -86,9 +86,9 @@ C:\Users\VikS\source\repos\hopTropSchedule\AppTest\bin\Debug\netcoreapp3.0\zh-Ha
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll
-C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.csprojAssemblyReference.cache
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.AssemblyInfoInputs.cache
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.AssemblyInfo.cs
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.csproj.CopyComplete
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.dll
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.csprojAssemblyReference.cache

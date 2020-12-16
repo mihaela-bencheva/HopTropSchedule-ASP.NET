@@ -12,7 +12,7 @@ namespace Data.Models.Models
         [EmailAddress]
         [StringLength(30)]
         public string Email { get; set; }
-        [StringLength(15)]
+        [StringLength(150)]
         public string Password { get; set; }
         [StringLength(20)]
         public string FirstName { get; set; }

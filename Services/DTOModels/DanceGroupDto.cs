@@ -6,6 +6,7 @@ namespace Services.DTOModels
 {
     public class DanceGroupDto
     {
+        public string ID { get; set; }
         public string DanceGroupName { get; set; }
         public List<UserDto> Users { get; set; }
     }

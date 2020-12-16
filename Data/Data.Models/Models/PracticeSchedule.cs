@@ -8,7 +8,7 @@ namespace Data.Models.Models
 {
     public class PracticeSchedule : InfoModel
     {
-        [StringLength(10)]
+        [StringLength(20)]
         public string DayName { get; set; }
         [StringLength(10)]
         public string PracticeTime { get; set; }

@@ -27,7 +27,7 @@ namespace Services
             this._dbContext = dbContext;
         }
 
-        public string RegisterUser(UserDto user)
+        public string RegisterUser(RegisterDto user)
         {
             var ifExist = _dbContext.Users.FirstOrDefault(h => h.Email == user.Email);
 
@@ -116,7 +116,7 @@ namespace Services
             return Convert.ToBase64String(hashBytes);
         }
 
-        private bool CheckUserPassword(UserDto model)
+        private bool CheckUserPassword(RegisterDto model)
         {
             bool result =
                     model.Password.Any(c => char.IsLetter(c)) &&

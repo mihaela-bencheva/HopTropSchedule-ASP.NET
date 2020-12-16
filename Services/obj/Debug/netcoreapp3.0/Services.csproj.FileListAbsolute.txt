@@ -10,5 +10,5 @@ C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Serv
 C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.csproj.CopyComplete
 C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Services\obj\Debug\netcoreapp3.0\Services.pdb
-C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\DataConnection.dll
-C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\DataConnection.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Data.DataConnection.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Services\bin\Debug\netcoreapp3.0\Data.DataConnection.pdb
