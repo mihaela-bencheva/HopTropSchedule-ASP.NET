@@ -19,13 +19,16 @@ namespace Services.ApiServices
             this._dbContext = dbContext;
         }
 
-        public void CreateNewSchedule(ScheduleDto schedule)
+        public bool CreateNewSchedule(ScheduleDto schedule)
         {
+            var danceGroupID = _dbContext.DanceGroups.Where(
+                        y => y.DanceGroupName == schedule.DanceGroupName
+                        ).FirstOrDefault().ID;
             var ifExists = _dbContext.PracticeSchedules.Where(
-                x => 
+                x =>
                     x.DayName == schedule.DayName &&
                     x.PracticeTime == schedule.PracticeTime &&
-                    x.DanceGroupId == schedule.DanceGroupId
+                    x.DanceGroupId == danceGroupID
                 ).FirstOrDefault();
             if(ifExists == null)
             {
@@ -33,10 +36,12 @@ namespace Services.ApiServices
                 { 
                     DayName = schedule.DayName,
                     PracticeTime = schedule.PracticeTime,
-                    DanceGroupId = schedule.DanceGroupId
+                    DanceGroupId = danceGroupID
                 });
                 _dbContext.SaveChanges();
+                return true;
             }
+            return false;
         }
         public List<ScheduleDto> GetAll()
         {
@@ -44,20 +49,15 @@ namespace Services.ApiServices
             {
                 return _dbContext.PracticeSchedules.Select(x => new ScheduleDto
                 {
+                    ScheduleID = x.ID,
                     DayName = x.DayName,
                     PracticeTime = x.PracticeTime,
                     DanceGroupId = x.DanceGroupId,
-                    //DanceGroup = new DanceGroupDto
-                    //{
-                    //    DanceGroupName = x.DanceGroup.DanceGroupName,
-                    //    Users = x.DanceGroup.Users.Select(y=> new UserDto 
-                    //    { 
-                    //        Email = y.Email,
-                    //        FirstName = y.FirstName,
-                    //        LastName = y.LastName,
-                    //        PhoneNumber = y.PhoneNumber
-                    //    }).ToList(),
-                    //}
+                    DanceGroupName = _dbContext.DanceGroups.Where(
+                        y =>
+                        y.ID == x.DanceGroupId
+                        ).FirstOrDefault().DanceGroupName
+                    
                 }).ToList();
             }
         }
@@ -89,9 +89,40 @@ namespace Services.ApiServices
                 
         }
 
-        public void DeleteExistingSchedule(ScheduleDto schedule)
+        public bool DeleteExistingSchedule(ScheduleDto schedule)
         {
-            
+            var danceGroupID = _dbContext.DanceGroups.Where(
+                        y => y.DanceGroupName == schedule.DanceGroupName
+                        ).FirstOrDefault().ID;
+            var ifExists = _dbContext.PracticeSchedules.Where(
+                x =>
+                    x.DayName == schedule.DayName &&
+                    x.PracticeTime == schedule.PracticeTime &&
+                    x.DanceGroupId == danceGroupID
+                ).FirstOrDefault();
+            if (ifExists != null)
+            {
+                _dbContext.PracticeSchedules.Remove(ifExists);
+                _dbContext.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateExistingSchedule(ScheduleDto schedule)
+        {
+            var ifExists = _dbContext.PracticeSchedules.Where(
+                x => x.ID == schedule.ScheduleID
+                ).FirstOrDefault();
+            if (ifExists != null)
+            {
+                ifExists.DayName = schedule.DayName;
+                ifExists.PracticeTime = schedule.PracticeTime;
+                ifExists.DanceGroupId = schedule.DanceGroupId;
+                _dbContext.SaveChanges();
+                return true;
+            }
+            return false;
         }
     }
 }

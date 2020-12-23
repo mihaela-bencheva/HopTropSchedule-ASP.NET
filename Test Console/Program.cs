@@ -10,13 +10,13 @@ namespace Test_Console
     {
         static void Main(string[] args)
         {
-            IdentityService identityService = new IdentityService(new ScheduleDbContext());
-            identityService.RegisterUser(new Services.DTOModels.RegisterDto()
-            {
-                Email = "mihaela@mail.eu",
-                Password = "mm+15",
-                CheckPassword = "mm+15"
-            });
+            //IdentityService identityService = new IdentityService(new ScheduleDbContext());
+            //identityService.RegisterUser(new Services.DTOModels.RegisterDto()
+            //{
+            //    Email = "mihaela@mail.eu",
+            //    Password = "mm+15",
+            //    CheckPassword = "mm+15"
+            //});
             //identityService.LogInUser(new Services.DTOModels.UserDto()
             //{
             //    Email = "mihaela@mail.com",
@@ -51,14 +51,19 @@ namespace Test_Console
             //{
             //    Console.WriteLine(item.ToString());
             //}
-            GroupService group = new GroupService(new ScheduleDbContext());
-            ScheduleService scheduleService = new ScheduleService(new ScheduleDbContext());
+            //ScheduleService scheduleService = new ScheduleService(new ScheduleDbContext());
 
-            ScheduleDto schedule = new ScheduleDto();
-            schedule.DayName = "Friday";
-            schedule.PracticeTime = "19:30";
-            schedule.DanceGroupId = group.FindGroupByName("Напреднали").ID;
-            scheduleService.CreateNewSchedule(schedule);
+            //ScheduleDto schedule = new ScheduleDto();
+            //schedule.ScheduleID = "4087d118-d268-48eb-bd16-5e4f4c4652df";
+            //schedule.DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df";
+            //schedule.DayName = "Friday";
+            //schedule.PracticeTime = "18:20";
+            //scheduleService.UpdateExistingSchedule(schedule);
+            GroupService groupService = new GroupService(new ScheduleDbContext());
+            DanceGroupDto danceGroup = new DanceGroupDto();
+            danceGroup.ID = "e0de92fa-845e-4bf9-bb7e-46172df21f75";
+            danceGroup.DanceGroupName = "Средно напреднали";
+            groupService.UpdateExistingDanceGroup(danceGroup);
         }
     }
 }

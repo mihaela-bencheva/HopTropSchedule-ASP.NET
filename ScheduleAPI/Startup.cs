@@ -15,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
 using Services;
+using Services.ApiServices;
 
 namespace ScheduleAPI
 {
@@ -34,6 +35,7 @@ namespace ScheduleAPI
             services.AddControllers();
             services.AddScoped<ScheduleDbContext>();
             services.AddScoped<IdentityService>();
+            services.AddScoped<ScheduleService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
