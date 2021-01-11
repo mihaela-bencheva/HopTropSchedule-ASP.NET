@@ -9,5 +9,6 @@ namespace Services.DTOModels
         public string ID { get; set; }
         public string DanceGroupName { get; set; }
         public List<UserDto> Users { get; set; }
+        public int UserCount { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Data.DataConnection;
 using Data.Models.Models;
+using Microsoft.EntityFrameworkCore;
 using Services.DTOModels;
 using System;
 using System.Collections.Generic;
@@ -66,6 +67,25 @@ namespace Services.ApiServices
             {
                 ifExists.DanceGroupName = danceGroup.DanceGroupName;
                 dbContext.SaveChanges();
+            }
+        }
+
+        public List<DanceGroupDto> GetGroupsDetails()
+        {
+            using (dbContext)
+            {
+                return dbContext.DanceGroups
+                    .Include(x => x.Users)
+                    .ToList()
+                    .GroupBy(x => new { x.ID, x.DanceGroupName })
+                    .Select(x => new DanceGroupDto()
+                    {
+                        ID = x.Key.ID,
+                        DanceGroupName = x.Key.DanceGroupName,
+                        UserCount = x.Count()
+                    })
+                    .OrderBy(x => x.DanceGroupName)
+                    .ToList();
             }
         }
     }

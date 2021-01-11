@@ -3,6 +3,7 @@ using Services;
 using Services.ApiServices;
 using Services.DTOModels;
 using System;
+using System.Collections.Generic;
 
 namespace Test_Console
 {
@@ -59,11 +60,14 @@ namespace Test_Console
             //schedule.DayName = "Friday";
             //schedule.PracticeTime = "18:20";
             //scheduleService.UpdateExistingSchedule(schedule);
+            //GroupService groupService = new GroupService(new ScheduleDbContext());
+            //DanceGroupDto danceGroup = new DanceGroupDto();
+            //danceGroup.ID = "e0de92fa-845e-4bf9-bb7e-46172df21f75";
+            //danceGroup.DanceGroupName = "Средно напреднали";
+            //groupService.UpdateExistingDanceGroup(danceGroup);
             GroupService groupService = new GroupService(new ScheduleDbContext());
-            DanceGroupDto danceGroup = new DanceGroupDto();
-            danceGroup.ID = "e0de92fa-845e-4bf9-bb7e-46172df21f75";
-            danceGroup.DanceGroupName = "Средно напреднали";
-            groupService.UpdateExistingDanceGroup(danceGroup);
+            List<DanceGroupDto> list = groupService.GetGroupsDetails();
+            Console.WriteLine(list[0].UserCount);
         }
     }
 }
