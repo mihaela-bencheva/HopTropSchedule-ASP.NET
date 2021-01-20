@@ -13,6 +13,6 @@ namespace Data.Models.Models
         public List<User> Users { get; set; }
         public List<PracticeSchedule> PracticeSchedules { get; set; }
         public List<DanceGroupFolkDance> DanceGroupFolkDances { get; set; }
-        public List<Image> Images { get; set; }
+        public Image Image { get; set; }
     }
 }

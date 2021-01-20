@@ -9,10 +9,12 @@ using Data.DataConnection;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
@@ -25,7 +27,7 @@ namespace ScheduleAPI
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment webHost)
         {
             Configuration = configuration;
         }
@@ -40,6 +42,9 @@ namespace ScheduleAPI
             services.AddScoped<ScheduleDbContext>();
             services.AddScoped<IdentityService>();
             services.AddScoped<ScheduleService>();
+            services.AddScoped<GroupService>();
+            services.AddScoped<DanceService>();
+            services.AddScoped<UserService>();
 
             var path = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
             var file = Path.Combine(path, "tokenconfig.json");
@@ -66,6 +71,8 @@ namespace ScheduleAPI
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.ASCII.GetBytes(salt))
                 };
             });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -83,6 +90,8 @@ namespace ScheduleAPI
             app.UseAuthentication();
 
             app.UseAuthorization();
+
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {

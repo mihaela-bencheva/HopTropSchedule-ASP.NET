@@ -29,6 +29,9 @@ namespace Services
 
         public string RegisterUser(RegisterDto user)
         {
+            var danceGroupID = _dbContext.DanceGroups.Where(
+                        y => y.DanceGroupName == user.DanceGroupName
+                        ).FirstOrDefault().ID;
             var ifExist = _dbContext.Users.FirstOrDefault(h => h.Email == user.Email);
 
             if (ifExist == null)
@@ -42,6 +45,10 @@ namespace Services
                     {
                         Email = user.Email,
                         Password = hashedPassword,
+                        FirstName = user.FirstName,
+                        LastName = user.LastName,
+                        PhoneNumber = user.PhoneNumber,
+                        DanceGroupId = danceGroupID
                     });
                     _dbContext.SaveChanges();
                 }
@@ -65,6 +72,28 @@ namespace Services
                 }
                 return string.Empty;
             }
+        }
+
+        public bool UserChangePassword(RegisterDto user)
+        {
+            var ifExists = _dbContext.Users.Where(x => x.Email == user.Email).FirstOrDefault();
+            if (ifExists != null)
+            {
+                bool passwordValidation = CheckUserPassword(user);
+                if (user.CheckPassword == user.Password && passwordValidation == true)
+                {
+                    string hashedPassword = Hash(user.Password);
+
+                    _dbContext.Users.Add(new User()
+                    {
+                        Email = user.Email,
+                        Password = hashedPassword,
+                    });
+                    _dbContext.SaveChanges();
+                } 
+                return true;
+            }
+            return false;
         }
 
         private string TokenSetup(string email)

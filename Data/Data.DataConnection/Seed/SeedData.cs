@@ -346,12 +346,96 @@ namespace Data.DataConnection.Seed
                     SongUrl = "123"
                 }
             };
+            List<DanceGroupFolkDance> danceGroupFolkDances = new List<DanceGroupFolkDance>()
+            {
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[0].ID,
+                    FolkDanceId = folkDances[0].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[0].ID,
+                    FolkDanceId = folkDances[1].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[0].ID,
+                    FolkDanceId = folkDances[2].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[1].ID,
+                    FolkDanceId = folkDances[0].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[1].ID,
+                    FolkDanceId = folkDances[1].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[1].ID,
+                    FolkDanceId = folkDances[2].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[1].ID,
+                    FolkDanceId = folkDances[3].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[1].ID,
+                    FolkDanceId = folkDances[4].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[0].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[1].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[2].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[3].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[4].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[5].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[6].ID
+                },
+                new DanceGroupFolkDance()
+                {
+                    DanceGroupId = danceGroups[2].ID,
+                    FolkDanceId = folkDances[7].ID
+                }
+            };
             modelBuilder.Entity<DanceGroup>().HasData(danceGroups);
             modelBuilder.Entity<User>().HasData(users);
             modelBuilder.Entity<FolkDance>().HasData(folkDances);
             modelBuilder.Entity<PracticeSchedule>().HasData(practiceSchedules);
             modelBuilder.Entity<DanceCloth>().HasData(danceCloths);
             modelBuilder.Entity<DanceSong>().HasData(danceSongs);
+            modelBuilder.Entity<DanceGroupFolkDance>().HasData(danceGroupFolkDances);
             return modelBuilder;
         }
     }

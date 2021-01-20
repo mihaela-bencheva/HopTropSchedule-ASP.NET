@@ -14,5 +14,10 @@ namespace Services.DTOModels
         [Required]
         [Compare("Password")]
         public string CheckPassword { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public string DanceGroupId { get; set; }
+        public string DanceGroupName { get; set; }
     }
 }

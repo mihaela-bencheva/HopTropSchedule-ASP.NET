@@ -76,5 +76,29 @@ namespace ScheduleAPI.Controllers
             }
             return BadRequest();
         }
+
+        //api/schedule/getbygroupid/{groupId}
+        [HttpGet("getbygroupid/{groupId}")]
+        public IActionResult GetSchedulesByDanceGroupId(string groupId)
+        {
+            var schedules = scheduleService.GetSchedulesByDanceGroupId(groupId);
+            if (schedules != null)
+            {
+                return Ok(schedules);
+            }
+            return BadRequest();
+        }
+
+        //api/schedule/getbydayname/{dayName}
+        [HttpGet("getbydayname/{dayName}")]
+        public IActionResult GetSchedulesByDayName(string dayName)
+        {
+            var schedules = scheduleService.GetSchedulesByDayName(dayName);
+            if (schedules != null)
+            {
+                return Ok(schedules);
+            }
+            return BadRequest();
+        }
     }
 }

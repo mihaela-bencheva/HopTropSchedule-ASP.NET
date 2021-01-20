@@ -15,7 +15,8 @@ namespace Services.DTOModels
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string PhoneNumber { get; set; }
-
+        public string DanceGroupId { get; set; }
+        public string DanceGroupName { get; set; }
         public override string ToString()
         {
             return Email + " " + FirstName + " " + LastName + " " + PhoneNumber;

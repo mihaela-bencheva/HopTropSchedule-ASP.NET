@@ -14,9 +14,11 @@ namespace Test_Console
             //IdentityService identityService = new IdentityService(new ScheduleDbContext());
             //identityService.RegisterUser(new Services.DTOModels.RegisterDto()
             //{
-            //    Email = "mihaela@mail.eu",
+            //    Email = "mihaela666@mail.de",
             //    Password = "mm+15",
-            //    CheckPassword = "mm+15"
+            //    CheckPassword = "mm+15",
+            //    FirstName = "Mihaela",
+            //    LastName = "Bencheva"
             //});
             //identityService.LogInUser(new Services.DTOModels.UserDto()
             //{
@@ -66,8 +68,20 @@ namespace Test_Console
             //danceGroup.DanceGroupName = "Средно напреднали";
             //groupService.UpdateExistingDanceGroup(danceGroup);
             GroupService groupService = new GroupService(new ScheduleDbContext());
-            List<DanceGroupDto> list = groupService.GetGroupsDetails();
-            Console.WriteLine(list[0].UserCount);
+            List<DanceGroupDto> list = groupService.GetGroupDetails("Майстори");
+            Console.WriteLine(list);
+            foreach (var item in list)
+            {
+                Console.WriteLine(item.FolkDances);
+            }
+            //UserService userService = new UserService(new ScheduleDbContext());
+            //UserDto user = new UserDto();
+            //user.Email = "mihaela666@mail.de";
+            //user.Password = "mm+15";
+            //user.FirstName = "Mihaela";
+            //user.PhoneNumber = "0980908074";
+            //user.DanceGroupName = "Майстори";
+            //userService.UpdateExistingUser(user);
         }
     }
 }

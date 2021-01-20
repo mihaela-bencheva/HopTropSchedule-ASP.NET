@@ -12,7 +12,6 @@ namespace ScheduleAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
     public class IdentityController : ControllerBase
     {
         private readonly IdentityService identityService;

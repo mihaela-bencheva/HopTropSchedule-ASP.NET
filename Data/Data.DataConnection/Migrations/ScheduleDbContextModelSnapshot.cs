@@ -38,25 +38,25 @@ namespace Data.DataConnection.Migrations
                     b.HasData(
                         new
                         {
-                            ID = "340d13fa-1e61-44db-b445-2d8eacb7633d",
+                            ID = "e4435c0d-c8d7-4375-a36b-2528c6256104",
                             ClothType = "Женска носия",
                             ShoesType = "Скарпини"
                         },
                         new
                         {
-                            ID = "8940c0ca-367b-4ee1-8be5-56cd83ebb213",
+                            ID = "1f3b324e-b6e8-4822-adb1-581b35a6b384",
                             ClothType = "Мъжка носия",
                             ShoesType = "Скарпини"
                         },
                         new
                         {
-                            ID = "d2ffc119-8b3b-41c5-a15e-a1d7d6c65a9e",
+                            ID = "028297bd-1cc6-49fc-9d6b-b880cc66323d",
                             ClothType = "Женска носия",
                             ShoesType = "Цървули"
                         },
                         new
                         {
-                            ID = "9401ec3f-1b6b-41db-95d3-2fae3bed2990",
+                            ID = "fe5901cc-2f2d-4972-95b6-1ddf3f05eeba",
                             ClothType = "Мъжка носия",
                             ShoesType = "Цървули"
                         });
@@ -78,17 +78,17 @@ namespace Data.DataConnection.Migrations
                     b.HasData(
                         new
                         {
-                            ID = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "2d5f2e14-facc-4962-8019-716cc2585900",
                             DanceGroupName = "Начинаещи"
                         },
                         new
                         {
-                            ID = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             DanceGroupName = "Напреднали"
                         },
                         new
                         {
-                            ID = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             DanceGroupName = "Майстори"
                         });
                 });
@@ -111,6 +111,104 @@ namespace Data.DataConnection.Migrations
                     b.HasIndex("FolkDanceId");
 
                     b.ToTable("DanceGroupFolkDances");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = "ab0c7bc6-d1f6-42c0-86fc-2c62054596a6",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
+                            FolkDanceId = "8dd41ddc-7e3e-4331-9366-e0421ff2c9a1"
+                        },
+                        new
+                        {
+                            ID = "264c0c92-0758-4918-84b3-646aa042191e",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
+                            FolkDanceId = "bf421326-2c5f-4c04-b077-24f6ad92d203"
+                        },
+                        new
+                        {
+                            ID = "f430f242-bece-4148-b80d-0285ed156afe",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
+                            FolkDanceId = "1588b594-cb6b-4f7f-b2f8-81a480ad4a6c"
+                        },
+                        new
+                        {
+                            ID = "8b0288d5-8f75-42db-9385-5f561187d5ae",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
+                            FolkDanceId = "8dd41ddc-7e3e-4331-9366-e0421ff2c9a1"
+                        },
+                        new
+                        {
+                            ID = "afa89b22-f62a-4f13-b0d6-5795cfd2247a",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
+                            FolkDanceId = "bf421326-2c5f-4c04-b077-24f6ad92d203"
+                        },
+                        new
+                        {
+                            ID = "fab32631-7b74-4cf4-8563-203b584e342c",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
+                            FolkDanceId = "1588b594-cb6b-4f7f-b2f8-81a480ad4a6c"
+                        },
+                        new
+                        {
+                            ID = "f51e09e3-cd21-40e0-9422-eaf572d7eafc",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
+                            FolkDanceId = "3811c08b-90e3-4b04-bcae-32b48bfb0fb8"
+                        },
+                        new
+                        {
+                            ID = "f2eef5c1-5263-447e-a2b6-d50fa4b3985b",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
+                            FolkDanceId = "4082d891-41e8-4cb5-a053-df6f8701166f"
+                        },
+                        new
+                        {
+                            ID = "e388e466-14d1-4c33-988d-5251d6fcd68f",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "8dd41ddc-7e3e-4331-9366-e0421ff2c9a1"
+                        },
+                        new
+                        {
+                            ID = "4374b263-60b5-4afa-88be-bb1f99f4a2b1",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "bf421326-2c5f-4c04-b077-24f6ad92d203"
+                        },
+                        new
+                        {
+                            ID = "e7a26fe7-ba7f-46d1-82f8-58086275b29f",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "1588b594-cb6b-4f7f-b2f8-81a480ad4a6c"
+                        },
+                        new
+                        {
+                            ID = "e5bc3516-b5e8-4f1a-ac44-b32969c633a3",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "3811c08b-90e3-4b04-bcae-32b48bfb0fb8"
+                        },
+                        new
+                        {
+                            ID = "5a57314a-589b-420c-b9e9-15bf2c1649df",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "4082d891-41e8-4cb5-a053-df6f8701166f"
+                        },
+                        new
+                        {
+                            ID = "921e120b-e00a-4067-87bd-17a7e05a802b",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "84878827-c8e8-4b99-bb32-bbccf6e7c658"
+                        },
+                        new
+                        {
+                            ID = "aa7c20a0-cbc2-4d53-b5b5-2d3605a9b93a",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "a655810c-d7f7-4807-9492-0b4e80372552"
+                        },
+                        new
+                        {
+                            ID = "4206f17d-87cf-4bbb-a89b-4e83908ebdc2",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
+                            FolkDanceId = "f412b812-1fbe-46f9-96af-b7e45cb021d3"
+                        });
                 });
 
             modelBuilder.Entity("Data.Models.Models.DanceSong", b =>
@@ -132,61 +230,61 @@ namespace Data.DataConnection.Migrations
                     b.HasData(
                         new
                         {
-                            ID = "4d1934ad-6a55-47c8-951f-b7942dbd73bb",
+                            ID = "688c9f2b-5860-463f-93a0-a0429e9a78e1",
                             SongName = "Pesen1",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "059620e7-71f7-41e9-9f07-14e3d7dfd0ce",
+                            ID = "3078dcd0-a279-4b09-9564-704e86bd6ec2",
                             SongName = "Pesen2",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "c87dfb96-3cf0-4823-b497-206825fb8dd3",
+                            ID = "6e077db4-9e34-4ead-9e78-1f49d9b17943",
                             SongName = "Pesen3",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "c66deb2c-3326-48a8-a54e-538acf3c14f3",
+                            ID = "b447092e-216a-4f35-b9f1-7623289bdc39",
                             SongName = "Pesen4",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "abfbe360-76aa-4c16-8b13-a8dc8ccbc8cd",
+                            ID = "fe116bec-c6a3-485b-ab6b-02730961a091",
                             SongName = "Pesen5",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "3cf6a68c-331b-452c-86b3-2a83d717daf4",
+                            ID = "214d8cad-281c-4235-ad02-05823b2b306b",
                             SongName = "Pesen6",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "852003e2-2e15-44f5-b4ad-787bc4afe6a5",
+                            ID = "178937bf-f5c2-42b5-a261-3501f0c6e374",
                             SongName = "Pesen7",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "e57e5215-6f0e-44d3-b64c-36b037a10304",
+                            ID = "f5b44b87-6cc3-43b5-b3d7-5b91679cf6ea",
                             SongName = "Pesen8",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "0dbb7320-ea95-4631-a94b-f373cd580fc7",
+                            ID = "be6cb96b-47e0-4cbe-9fb4-ca2238f936a3",
                             SongName = "Pesen9",
                             SongUrl = "123"
                         },
                         new
                         {
-                            ID = "7154734b-f603-4a40-a87d-527538c382d2",
+                            ID = "6af0fcb3-97f0-42ba-b9b0-e0352319c304",
                             SongName = "Pesen10",
                             SongUrl = "123"
                         });
@@ -223,61 +321,61 @@ namespace Data.DataConnection.Migrations
                     b.HasData(
                         new
                         {
-                            ID = "109dc466-fbc6-474a-b60c-e3b6498bc607",
+                            ID = "8dd41ddc-7e3e-4331-9366-e0421ff2c9a1",
                             FolkDanceName = "Svornato",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "3cfeea53-0927-469d-a28d-f314b5f6cf3e",
+                            ID = "bf421326-2c5f-4c04-b077-24f6ad92d203",
                             FolkDanceName = "Chichovo",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "749a385c-3364-488a-8b59-e0aa3716d828",
+                            ID = "1588b594-cb6b-4f7f-b2f8-81a480ad4a6c",
                             FolkDanceName = "Pravo",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "9c4c90ff-1401-49e6-9af2-fbc3ad017efe",
+                            ID = "3811c08b-90e3-4b04-bcae-32b48bfb0fb8",
                             FolkDanceName = "Lyavata",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "0df25e8c-f459-4636-8cb7-14924525558c",
+                            ID = "4082d891-41e8-4cb5-a053-df6f8701166f",
                             FolkDanceName = "Pandalaj",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "b3101db7-be63-4606-8e67-48f24ad2884f",
+                            ID = "84878827-c8e8-4b99-bb32-bbccf6e7c658",
                             FolkDanceName = "Ginka",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "6630af9d-d7b7-4d56-8fb5-9f86763dc8cb",
+                            ID = "a655810c-d7f7-4807-9492-0b4e80372552",
                             FolkDanceName = "Dunavsko",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "07de1e70-a334-404d-8012-100b3b94cac1",
+                            ID = "f412b812-1fbe-46f9-96af-b7e45cb021d3",
                             FolkDanceName = "Pravo Trakiisko",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "28448c8c-f975-4183-9491-f7a1e37b1504",
+                            ID = "11af8124-4fba-4ac3-98eb-29ea004235f3",
                             FolkDanceName = "Sborenka",
                             FolkDanceSize = "2/4"
                         },
                         new
                         {
-                            ID = "5f0c9c1a-03f8-4618-8c94-39dcedf86c92",
+                            ID = "91e01f4c-2460-4eaf-aa3a-423241b57375",
                             FolkDanceName = "Graovsko",
                             FolkDanceSize = "2/4"
                         });
@@ -346,36 +444,36 @@ namespace Data.DataConnection.Migrations
                     b.HasData(
                         new
                         {
-                            ID = "7f24645e-1792-4165-85fc-77c9625ec9f7",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "841e90c5-0b12-4750-bf7e-b345c72358c5",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             DayName = "Ponedelnik",
                             PracticeTime = "18:30"
                         },
                         new
                         {
-                            ID = "1722a156-f4e0-43f2-8427-3782b8f54129",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "4c30140b-b4a1-4c25-b270-38323cd676ff",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             DayName = "Ponedelnik",
                             PracticeTime = "19:40"
                         },
                         new
                         {
-                            ID = "fb946194-0996-4804-b877-8d37d322b4d4",
-                            DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "b2e107df-a362-43db-85f3-7b170a4b6891",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             DayName = "Ponedelnik",
                             PracticeTime = "20:50"
                         },
                         new
                         {
-                            ID = "ccdd3130-c857-4dc9-aca8-cac4a5f10a23",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "e8c4ab9d-89d0-45b5-8d17-42bf0e6cb648",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             DayName = "Vtornik",
                             PracticeTime = "17:30"
                         },
                         new
                         {
-                            ID = "ab903747-6c24-460a-901b-a055e2abb2bd",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "447d719a-6007-4588-87ec-c11dc09860ec",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             DayName = "Vtornik",
                             PracticeTime = "18:40"
                         });
@@ -419,8 +517,8 @@ namespace Data.DataConnection.Migrations
                     b.HasData(
                         new
                         {
-                            ID = "94434732-94af-4c5c-b25a-d6028ad01a52",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "2122bc92-2e0f-467f-a519-ba8cdf2c1a71",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             Email = "abc@abc.bg",
                             FirstName = "Ivan",
                             LastName = "Ivanov",
@@ -429,8 +527,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "6935c5ac-98e7-4beb-a5ae-97ee1c50f235",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "40833b68-367d-4cb1-a8c9-7a90e82bc723",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             Email = "goshka@abv.bg",
                             FirstName = "Ginka",
                             LastName = "Goshkova",
@@ -439,8 +537,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "f0744446-c997-4e9b-9121-ee0ccd9a9d08",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "dbf36c54-716f-4db4-be5f-594873c8cbda",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             Email = "dragana@abc.bg",
                             FirstName = "Dragana",
                             LastName = "Draganova",
@@ -449,8 +547,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "7edffdcf-54d2-4f86-bfef-79d86006fea3",
-                            DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "1679be25-12be-45e2-9f92-1e01dc48fca8",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             Email = "abc@abc.bg",
                             FirstName = "Desa",
                             LastName = "Ivanova",
@@ -459,8 +557,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "549d7849-5036-428e-917e-972f15eafb7f",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "86435fb5-3659-4782-b4ea-a1a5a7aaaab0",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             Email = "goshka@abv.bg",
                             FirstName = "Gena",
                             LastName = "Genova",
@@ -469,8 +567,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "3ffb5349-0af7-483b-8ef2-c06ce56870da",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "11266564-5d48-4c88-938b-c63b6d1f7524",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             Email = "dragana@abc.bg",
                             FirstName = "Pepa",
                             LastName = "Draginova",
@@ -479,8 +577,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "88021783-7318-444b-bb27-100aa867f95c",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "348bd049-222a-4ded-b417-5223817a84f1",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             Email = "abc@abc.bg",
                             FirstName = "Petko",
                             LastName = "Ivanovic",
@@ -489,8 +587,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "b60b920b-fd6f-4432-90fd-0198cb3ec862",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "dae60064-b1ab-4a25-a802-95ae8b518455",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             Email = "goshka@abv.bg",
                             FirstName = "Reni",
                             LastName = "Renova",
@@ -499,8 +597,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "d5e1c59f-9247-4450-a062-a1df12d0b7ab",
-                            DanceGroupId = "e0de92fa-845e-4bf9-bb7e-46172df21f75",
+                            ID = "3c31bdcd-7c42-46a0-905d-0dabb480e395",
+                            DanceGroupId = "2d5f2e14-facc-4962-8019-716cc2585900",
                             Email = "dragana@abc.bg",
                             FirstName = "Andreya",
                             LastName = "Draganova",
@@ -509,8 +607,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "b1ac4bf7-b3ba-4e95-9e86-592f1145f0d3",
-                            DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "9f0e5cf6-97af-4481-a40e-3d0f0d6bb55b",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             Email = "abc@abc.bg",
                             FirstName = "Dimitar",
                             LastName = "Penkov",
@@ -519,8 +617,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "b458b8b0-01eb-439e-907b-dd95f5527910",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "af5b14d5-2b75-49b4-95e6-431f3668a760",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             Email = "goshka@abv.bg",
                             FirstName = "Petya",
                             LastName = "Peteva",
@@ -529,8 +627,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "29df3ebd-6048-4bb7-997b-99cface6a1f2",
-                            DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "4c983e5f-36ad-4a98-b3fc-86ad25eed81f",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             Email = "dragana@abc.bg",
                             FirstName = "Ivana",
                             LastName = "Sokolova",
@@ -539,8 +637,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "a23e99ca-39ff-4708-81f8-2d222f05530c",
-                            DanceGroupId = "05de77c1-985f-47cc-bc12-879e0e3614e5",
+                            ID = "67c697e6-c89b-4737-87cd-10a394fd7d45",
+                            DanceGroupId = "a1f67e6e-aa8d-4d47-8173-38ea622d3693",
                             Email = "abc@abc.bg",
                             FirstName = "Ivanitsa",
                             LastName = "Ivanova",
@@ -549,8 +647,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "f61556ae-e77d-4cd7-8953-dadecb0dd4bf",
-                            DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "a507f1f7-e562-48c9-a5a0-d270b20cd30f",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             Email = "goshka@abv.bg",
                             FirstName = "Viki",
                             LastName = "Viktorova",
@@ -559,8 +657,8 @@ namespace Data.DataConnection.Migrations
                         },
                         new
                         {
-                            ID = "fb437f8d-aaa6-4312-a603-382cddccaba4",
-                            DanceGroupId = "c4225970-65b0-4003-842b-d231e8ad63df",
+                            ID = "f59bc83d-0df7-4816-83dd-6a203ea9210e",
+                            DanceGroupId = "9b694f40-1c96-4c1a-86f0-c3ce1243a8dd",
                             Email = "dragana@abc.bg",
                             FirstName = "Petkana",
                             LastName = "Draganova",

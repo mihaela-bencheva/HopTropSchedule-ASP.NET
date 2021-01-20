@@ -75,7 +75,7 @@ namespace Services.ApiServices
             }
         }
 
-        public List<ScheduleDto> GetScheduleByDanceGroupId(string groupId)
+        public List<ScheduleDto> GetSchedulesByDanceGroupId(string groupId)
         {
             using (_dbContext)
             {

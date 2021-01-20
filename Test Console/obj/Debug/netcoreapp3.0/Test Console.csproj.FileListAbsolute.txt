@@ -34,7 +34,6 @@ C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.Runtime.Caching.dll
-C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.Security.Permissions.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
@@ -59,3 +58,10 @@ C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Data.DataConnection.dll
 C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Data.DataConnection.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.Extensions.ObjectPool.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\Microsoft.Net.Http.Headers.dll
+C:\Users\VikS\source\repos\hopTropSchedule\Test Console\bin\Debug\netcoreapp3.0\System.IO.Pipelines.dll

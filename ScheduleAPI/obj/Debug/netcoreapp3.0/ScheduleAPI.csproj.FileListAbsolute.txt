@@ -62,7 +62,6 @@ C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\S
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.Runtime.Caching.dll
-C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\cs\Microsoft.CodeAnalysis.resources.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -139,3 +138,5 @@ C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\obj\Debug\netcoreapp3.0\S
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\obj\Debug\netcoreapp3.0\ScheduleAPI.pdb
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\Data.DataConnection.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\Data.DataConnection.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.IO.Pipelines.dll
