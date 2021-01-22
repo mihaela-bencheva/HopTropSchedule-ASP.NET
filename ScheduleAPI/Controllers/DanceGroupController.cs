@@ -40,7 +40,7 @@ namespace ScheduleAPI.Controllers
 
         //api/dancegroup/delete
         [Route("delete")]
-        [HttpPost]
+        [HttpDelete]
         public IActionResult DeleteExistingDanceGroup([FromBody]DanceGroupDto group)
         {
             var result = groupService.DeleteExistingDanceGroup(group);
@@ -64,9 +64,9 @@ namespace ScheduleAPI.Controllers
             return BadRequest();
         }
 
-        //api/dancegroup/group
-        [Route("group")]
-        [HttpPost]
+        //api/dancegroup/group/{danceGroup}
+        [Route("group/{danceGroup}")]
+        [HttpGet]
         public IActionResult FindGroupByName(string danceGroup)
         {
             var result = groupService.FindGroupByName(danceGroup);
@@ -110,8 +110,7 @@ namespace ScheduleAPI.Controllers
             return BadRequest();
         }
 
-        //api/dancegroup/details
-        //[Route("details")]
+        //api/dancegroup/details/{groupName}
         [HttpGet("details/{groupName}")]
         public IActionResult GetGroupDetails(string groupName)
         {
@@ -119,6 +118,18 @@ namespace ScheduleAPI.Controllers
             if (groups != null)
             {
                 return Ok(groups);
+            }
+            return BadRequest();
+        }
+
+        //api/dancegroup/getbyid/{groupId}
+        [HttpGet("getbyid/{groupId}")]
+        public IActionResult GetGroupById(string groupId)
+        {
+            var group = groupService.GetGroupById(groupId);
+            if (group != null)
+            {
+                return Ok(group);
             }
             return BadRequest();
         }

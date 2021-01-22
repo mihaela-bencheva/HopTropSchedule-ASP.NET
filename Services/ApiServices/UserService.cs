@@ -53,5 +53,51 @@ namespace Services.ApiServices
             }
             return false;
         }
+
+        public List<UserDto> GetAllUsers()
+        {
+            using (dbContext)
+            {
+                return dbContext.Users.Select(x => new UserDto
+                {
+                    DanceGroupId = x.DanceGroupId,
+                    Email = x.Email,
+                    FirstName = x.FirstName,
+                    LastName = x.LastName,
+                    PhoneNumber = x.PhoneNumber
+                })
+                    .OrderBy(x => x.FirstName)
+                    .ToList();
+            }
+        }
+
+        public bool DeleteExistingUser(UserEmailDto user)
+        {
+            var ifExists = dbContext.Users.Where(x =>
+                x.Email == user.Email 
+                ).FirstOrDefault();
+            if (ifExists != null)
+            {
+                dbContext.Users.Remove(ifExists);
+                dbContext.SaveChanges();
+                return true;
+            }
+            return false;
+        }
+
+        public UserDto GetUserById(string userId)
+        {
+            using (dbContext)
+            {
+                return dbContext.Users.Where(x => x.ID == userId).Select(y => new UserDto
+                {
+                    DanceGroupId = y.DanceGroupId,
+                    Email = y.Email,
+                    FirstName = y.FirstName,
+                    LastName = y.LastName,
+                    PhoneNumber = y.PhoneNumber
+                }).FirstOrDefault();
+            }
+        }
     }
 }

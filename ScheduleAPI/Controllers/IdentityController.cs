@@ -19,6 +19,8 @@ namespace ScheduleAPI.Controllers
         {
             this.identityService = identityService;
         }
+
+        //api/identity/register
         [Route("register")]
         [HttpPost]
         public IActionResult Register(RegisterDto model)
@@ -31,6 +33,7 @@ namespace ScheduleAPI.Controllers
             return Ok(token);
         }
 
+        //api/identity/register
         [Route("login")]
         [HttpPost]
         public IActionResult Login(UserDto user)
@@ -41,6 +44,19 @@ namespace ScheduleAPI.Controllers
                 return BadRequest();
             }
             return Ok(token);
+        }
+
+        //api/identity/pwdchange
+        [Route("pwdchange")]
+        [HttpPost]
+        public IActionResult UserChangePassword(RegisterDto register)
+        {
+            var result = identityService.UserChangePassword(register);
+            if (result)
+            {
+                return Ok("Password has been changed successfully!");
+            }
+            return BadRequest("Something went wrong!");
         }
     }
 }

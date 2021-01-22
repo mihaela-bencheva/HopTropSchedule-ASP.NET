@@ -24,7 +24,7 @@ namespace Services.ApiServices
                     x.FolkDanceName == dance.FolkDanceName &&
                     x.FolkDanceRegion == dance.FolkDanceRegion &&
                     x.FolkDanceSize == dance.FolkDanceSize
-            );
+            ).FirstOrDefault();
             if (ifExists == null)
             {
                 dbContext.FolkDances.Add(new FolkDance()
@@ -43,9 +43,7 @@ namespace Services.ApiServices
         {
             var ifExists = dbContext.FolkDances.Where(
                 x =>
-                    x.FolkDanceName == folk.FolkDanceName &&
-                    x.FolkDanceRegion == folk.FolkDanceRegion &&
-                    x.FolkDanceSize == folk.FolkDanceSize
+                    x.FolkDanceName == folk.FolkDanceName
                 ).FirstOrDefault();
             if (ifExists != null)
             {
@@ -82,6 +80,48 @@ namespace Services.ApiServices
                     FolkDanceName = x.FolkDanceName,
                     FolkDanceRegion = x.FolkDanceRegion,
                     FolkDanceSize = x.FolkDanceSize
+                }).ToList();
+            }
+        }
+
+        public FolkDanceDto GetDanceById(string danceId)
+        {
+            using (dbContext)
+            {
+                return dbContext.FolkDances.Where(x => x.ID == danceId).Select(y => new FolkDanceDto
+                {
+                    ID = y.ID,
+                    FolkDanceName = y.FolkDanceName,
+                    FolkDanceRegion = y.FolkDanceRegion,
+                    FolkDanceSize = y.FolkDanceSize
+                }).FirstOrDefault();
+            }
+        }
+
+        public FolkDanceDto GetDanceByName(string danceName)
+        {
+            using (dbContext)
+            {
+                return dbContext.FolkDances.Where(x => x.FolkDanceName == danceName).Select(y => new FolkDanceDto
+                {
+                    ID = y.ID,
+                    FolkDanceName = y.FolkDanceName,
+                    FolkDanceRegion = y.FolkDanceRegion,
+                    FolkDanceSize = y.FolkDanceSize
+                }).FirstOrDefault();
+            }
+        }
+
+        public List<FolkDanceDto> GetAllDancesByRegion(string region)
+        {
+            using (dbContext)
+            {
+                return dbContext.FolkDances.Where(x => x.FolkDanceRegion == region).Select(y => new FolkDanceDto
+                {
+                    ID = y.ID,
+                    FolkDanceName = y.FolkDanceName,
+                    FolkDanceRegion = y.FolkDanceRegion,
+                    FolkDanceSize = y.FolkDanceSize
                 }).ToList();
             }
         }

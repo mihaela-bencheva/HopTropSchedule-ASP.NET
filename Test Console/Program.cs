@@ -68,12 +68,8 @@ namespace Test_Console
             //danceGroup.DanceGroupName = "Средно напреднали";
             //groupService.UpdateExistingDanceGroup(danceGroup);
             GroupService groupService = new GroupService(new ScheduleDbContext());
-            List<DanceGroupDto> list = groupService.GetGroupDetails("Майстори");
-            Console.WriteLine(list);
-            foreach (var item in list)
-            {
-                Console.WriteLine(item.FolkDances);
-            }
+            DanceGroupDto list = groupService.GetGroupDetails("Майстори");
+            Console.WriteLine(list.FolkDances);
             //UserService userService = new UserService(new ScheduleDbContext());
             //UserDto user = new UserDto();
             //user.Email = "mihaela666@mail.de";

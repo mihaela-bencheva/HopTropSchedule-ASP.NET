@@ -86,8 +86,7 @@ namespace Services
 
                     _dbContext.Users.Add(new User()
                     {
-                        Email = user.Email,
-                        Password = hashedPassword,
+                        Password = hashedPassword
                     });
                     _dbContext.SaveChanges();
                 } 

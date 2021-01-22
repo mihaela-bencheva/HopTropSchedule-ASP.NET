@@ -138,5 +138,6 @@ C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\obj\Debug\netcoreapp3.0\S
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\obj\Debug\netcoreapp3.0\ScheduleAPI.pdb
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\Data.DataConnection.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\Data.DataConnection.pdb
+C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\VikS\source\repos\hopTropSchedule\ScheduleAPI\bin\Debug\netcoreapp3.0\System.IO.Pipelines.dll

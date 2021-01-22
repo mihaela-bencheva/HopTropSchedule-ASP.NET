@@ -71,5 +71,44 @@ namespace ScheduleAPI.Controllers
             }
             return BadRequest();
         }
+
+        //api/folkdance/getbyid/{danceId}
+        [Route("getbyid/{danceId}")]
+        [HttpGet]
+        public IActionResult GetDanceById(string danceId)
+        {
+            var dance = service.GetDanceById(danceId);
+            if (dance != null)
+            {
+                return Ok(dance);
+            }
+            return NotFound();
+        }
+
+        //api/folkdance/getbyname/{danceName}
+        [Route("getbyname/{danceName}")]
+        [HttpGet]
+        public IActionResult GetDanceByName(string danceName)
+        {
+            var dance = service.GetDanceByName(danceName);
+            if (dance != null)
+            {
+                return Ok(dance);
+            }
+            return NotFound();
+        }
+
+        //api/folkdance/region/{region}
+        [Route("region/{region}")]
+        [HttpGet]
+        public IActionResult GetAllDancesByRegion(string region)
+        {
+            var dances = service.GetAllDancesByRegion(region);
+            if (dances != null)
+            {
+                return Ok(dances);
+            }
+            return BadRequest();
+        }
     }
 }

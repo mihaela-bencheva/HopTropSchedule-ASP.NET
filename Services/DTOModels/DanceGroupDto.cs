@@ -13,5 +13,6 @@ namespace Services.DTOModels
         public int UserCount { get; set; }
         public int FolkDances { get; set; }
         public IFormFile Image { get; set; }
+        public byte[] ImageBytes { get; set; }
     }
 }

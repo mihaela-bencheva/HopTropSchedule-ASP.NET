@@ -88,7 +88,7 @@ namespace Services.ApiServices
             return false;
         }
 
-        public List<DanceGroupDto> GetGroupDetails(string groupName)
+        public DanceGroupDto GetGroupDetails(string groupName)
         {
             return dbContext.DanceGroupFolkDances
                 .Include(x => x.FolkDance)
@@ -101,7 +101,16 @@ namespace Services.ApiServices
                     DanceGroupName = x.Key.DanceGroupName,
                     FolkDances = x.Count(),
                 })
-                .ToList();
+                .FirstOrDefault();
+        }
+
+        public DanceGroupDto GetGroupById(string groupId)
+        {
+            return dbContext.DanceGroups.Where(x => x.ID == groupId).Select(y => new DanceGroupDto
+            {
+                DanceGroupName = y.DanceGroupName,
+                ImageBytes = GetFormFile(y.Image)
+            }).FirstOrDefault();
         }
 
         public List<DanceGroupDto> GetAllGroups()
@@ -111,19 +120,23 @@ namespace Services.ApiServices
                 var groups = dbContext.DanceGroups.Select(x => new DanceGroupDto
                 {
                     DanceGroupName = x.DanceGroupName,
-                    Image = GetFormFile(x.Image)
+                    ImageBytes = GetFormFile(x.Image)
                 }).ToList();
                 return groups;
             }
         }
 
-        private IFormFile GetFormFile(Image image)
+        private static byte[] GetFormFile(Image image)
         {
-
-            //using (var stream = System.IO.File.OpenRead($"{image.ImageUrl}"))
-            //{
-            //    return new FormFile(stream, 0, stream.Length, null, Path.GetFileName(stream.Name));
-            //}
+            if (image != null)
+            {
+                using (var stream = System.IO.File.OpenRead($"{image.ImageUrl}"))
+                {
+                    byte[] bytes = new byte[stream.Length];
+                    stream.Read(bytes, 0, (int)stream.Length);
+                    return bytes;
+                }
+            }
             return null;
         }
 
@@ -141,7 +154,7 @@ namespace Services.ApiServices
                 await form.CopyToAsync(memoryStream);
                 array = memoryStream.ToArray();
             }
-            return string.Format($"{path}\\{ image}");
+            return string.Format($"{path}");
         }
     }
 }

@@ -20,7 +20,7 @@ namespace ScheduleAPI.Controllers
             this.service = service;
         }
 
-        //api/user/getall
+        //api/user/getall/{groupId}
         [Authorize]
         [Route("getall/{groupId}")]
         [HttpGet]
@@ -36,7 +36,7 @@ namespace ScheduleAPI.Controllers
 
         //api/user/update
         [Route("update")]
-        [HttpPost]
+        [HttpPut]
         public IActionResult UpdateExistingUser(UserDto user)
         {
             var result = service.UpdateExistingUser(user);
@@ -45,6 +45,45 @@ namespace ScheduleAPI.Controllers
                 return Ok("The object has been successfully updated.");
             }
             return BadRequest("Something went wrong!");
+        }
+
+        //api/user/getallusers
+        [Route("getallusers")]
+        [HttpGet]
+        public IActionResult GetAllUsers()
+        {
+            var users = service.GetAllUsers();
+            if (users != null)
+            {
+                return Ok(users);
+            }
+            return BadRequest();
+        }
+
+        //api/user/delete
+        [Route("delete")]
+        [HttpDelete]
+        public IActionResult DeleteExistingUser(UserEmailDto user)
+        {
+            var result = service.DeleteExistingUser(user);
+            if (result)
+            {
+                return Ok("The object has been deleted successfully");
+            }
+            return BadRequest("Something went wrong!");
+        }
+
+        //api/user/getbyid/{userId}
+        [Route("getbyid/{userId}")]
+        [HttpGet]
+        public IActionResult GetUserById(string userId)
+        {
+            var user = service.GetUserById(userId);
+            if (user != null)
+            {
+                return Ok(user);
+            }
+            return BadRequest();
         }
     }
 }

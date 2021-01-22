@@ -62,6 +62,32 @@ namespace Services.ApiServices
             }
         }
 
+        public ScheduleDto GetScheduleById(string scheduleId)
+        {
+            using (_dbContext)
+            {
+                return _dbContext.PracticeSchedules.Where(x => x.ID == scheduleId).Select(y => new ScheduleDto
+                {
+                    DayName = y.DayName,
+                    PracticeTime = y.PracticeTime,
+                    DanceGroupId = y.DanceGroupId
+                }).FirstOrDefault();
+            }
+        }
+
+        public List<ScheduleDto> GetSchedulesByPracticeTime(string time)
+        {
+            using (_dbContext)
+            {
+                return _dbContext.PracticeSchedules.Where(x => x.PracticeTime == time).Select(y => new ScheduleDto
+                {
+                    DayName = y.DayName,
+                    PracticeTime = time,
+                    DanceGroupId = y.DanceGroupId
+                }).ToList();
+            }
+        }
+
         public List<ScheduleDto> GetSchedulesByDayName(string dayName)
         {
             using (_dbContext)

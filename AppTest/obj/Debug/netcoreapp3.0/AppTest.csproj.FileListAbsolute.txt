@@ -91,4 +91,3 @@ C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTe
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.csproj.CopyComplete
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.dll
 C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.pdb
-C:\Users\VikS\source\repos\hopTropSchedule\AppTest\obj\Debug\netcoreapp3.0\AppTest.csprojAssemblyReference.cache

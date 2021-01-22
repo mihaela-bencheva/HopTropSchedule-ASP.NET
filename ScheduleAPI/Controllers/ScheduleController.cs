@@ -100,5 +100,31 @@ namespace ScheduleAPI.Controllers
             }
             return BadRequest();
         }
+
+        //api/schedule/getbyId/{scheduleId}
+        [Route("getbyid/{scheduleId}")]
+        [HttpGet]
+        public IActionResult GetScheduleById(string scheduleId)
+        {
+            var result = scheduleService.GetScheduleById(scheduleId);
+            if (result != null)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
+
+        //api/schedule/getbytime/{practiceTime}
+        [Route("getbytime/{practiceTime}")]
+        [HttpGet]
+        public IActionResult GetSchedulesByPracticeTime(string practiceTime)
+        {
+            var schedules = scheduleService.GetSchedulesByPracticeTime(practiceTime);
+            if (schedules != null)
+            {
+                return Ok(schedules);
+            }
+            return BadRequest();
+        }
     }
 }
